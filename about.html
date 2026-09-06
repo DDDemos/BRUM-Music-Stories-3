@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>About Diego Minaya — Birmingham Music Stories</title>
+  <meta name="description" content="Meet Diego Minaya, developer and creative technologist, and the creator of BRUM Music." />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="About Diego Minaya — Birmingham Music Stories" />
+  <meta property="og:description" content="Developer and creative technologist Diego Minaya created BRUM Music to demonstrate AI-assisted development of interactive web experiences." />
+  <meta property="og:type" content="website" />
+  
+  <!-- Google Fonts: Cinzel (Sophisticated Serif Display), Epilogue (Editorial Body), Space Mono (Archival Code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Epilogue:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Exhibition Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER
+       ========================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="site-container header-inner">
+      
+      <!-- Brand Logo / Emblem -->
+      <a href="index.html" class="site-brand" aria-label="Birmingham Music Stories Home">
+        <!-- SVG Emblem matching Birmingham Music Stories Heritage Archive Vinyl Device -->
+        <svg class="brand-emblem-svg" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Outer Toothed / Perforated Border -->
+          <rect x="2" y="2" width="56" height="56" fill="#131315" stroke="#f6bc62" stroke-width="2" stroke-dasharray="3,2" />
+          <!-- Concentric Vinyl Grooves -->
+          <circle cx="30" cy="30" r="22" stroke="#b88636" stroke-width="0.75" />
+          <circle cx="30" cy="30" r="18" stroke="#f6bc62" stroke-width="0.75" />
+          <circle cx="30" cy="30" r="14" stroke="#b88636" stroke-width="0.75" />
+          <!-- Center Red Record Label -->
+          <circle cx="30" cy="30" r="9" fill="#9b2226" />
+          <!-- Spindle Hole -->
+          <circle cx="30" cy="30" r="3" fill="#0a0a0c" stroke="#f6bc62" stroke-width="0.5" />
+        </svg>
+
+        <div class="brand-text">
+          <div class="brand-title">
+            <span>BIRMINGHAM</span>
+            <span class="specimen-tag tag-brass" style="font-size: 0.6rem; padding: 0.1rem 0.35rem;">ARCHIVE</span>
+          </div>
+          <span class="brand-tagline-micro">MUSIC STORIES • EST. 1968</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="site-nav" role="navigation" aria-label="Exhibition navigation">
+        <a href="index.html#editorial-intro" class="nav-link">Introduction</a>
+        <a href="index.html#featured-stories" class="nav-link">Explore by Sound</a>
+        <a href="index.html#sound-map" class="nav-link">Sound Map</a>
+        <a href="index.html#timeline-section" class="nav-link">Music Through Time</a>
+        <a href="about.html" class="nav-link active" aria-current="page">About</a>
+      </nav>
+
+      <!-- Header Action Items -->
+      <div class="header-actions">
+        <div class="exhibition-edition-tag" aria-hidden="true">
+          <span>EXHIBITION NO. 042</span>
+          <span style="opacity: 0.4;">•</span>
+          <span>SPRING 2024</span>
+        </div>
+        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-label="Mobile Navigation">
+    <a href="index.html#editorial-intro" class="nav-link">Introduction</a>
+    <a href="index.html#featured-stories" class="nav-link">Explore by Sound &amp; Stories</a>
+    <a href="index.html#sound-map" class="nav-link">Birmingham Sound Map</a>
+    <a href="index.html#timeline-section" class="nav-link">Music Through Time</a>
+    <a href="about.html" class="nav-link active" aria-current="page">About</a>
+  </div>
+
+  <main class="about-page" role="main">
+    <section class="section-wrapper" aria-labelledby="about-name">
+      <div class="site-container">
+        <div class="intro-grid about-grid">
+          <div class="about-portrait-frame">
+            <!-- User-supplied photograph; original retained in public/assets/Photo/. -->
+            <img class="about-portrait" src="assets/images/about/diego-minaya-portrait.jpg"
+              alt="Portrait of Diego Minaya" width="3335" height="5000" decoding="async" />
+          </div>
+          <div>
+            <span class="specimen-tag tag-brass">About Me</span>
+            <h1 class="section-headline" id="about-name">Diego Minaya</h1>
+            <p class="about-role font-editorial-heading text-brass">Developer and Creative Technologist</p>
+            <p class="intro-body-copy about-biography">Diego works with interactive experiences, immersive technology and creative software. He created BRUM Music to demonstrate how AI-assisted development can rapidly prototype and build interactive web experiences.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="navigation.js" defer></script>
+</body>
+</html>

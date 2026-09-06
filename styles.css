@@ -429,7 +429,7 @@ img, svg {
   color: var(--text-main);
 }
 
-@media (min-width: 900px) {
+@media (min-width: 960px) {
   .mobile-menu-toggle {
     display: none;
   }
@@ -1815,4 +1815,38 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible {
 
 .timeline-card-artwork .archive-photo[src*="black-sabbath"] {
   object-position: center 20%;
+}
+
+/* About page: reuse the exhibition's editorial grid and design tokens. */
+.about-page {
+  padding-top: 5rem;
+}
+
+.about-grid {
+  align-items: center;
+}
+
+.about-portrait-frame {
+  overflow: hidden;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-hard);
+}
+
+.about-portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.about-role {
+  font-size: 0.95rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-biography {
+  max-width: 38rem;
+  margin-bottom: 0;
 }
