@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Birmingham Music Stories — The sounds, people and places that helped shape a city</title>
+  <meta name="description" content="An interactive digital exhibition celebrating Birmingham's musical heritage through its artists, genres, places, and historic sound map." />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Birmingham Music Stories" />
+  <meta property="og:description" content="The sounds, people and places that helped shape a city. An interactive digital exhibition celebrating Birmingham's musical heritage." />
+  <meta property="og:type" content="website" />
+  
+  <!-- Google Fonts: Cinzel (Sophisticated Serif Display), Epilogue (Editorial Body), Space Mono (Archival Code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Epilogue:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Exhibition Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER
+       ========================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="site-container header-inner">
+      
+      <!-- Brand Logo / Emblem -->
+      <a href="#" class="site-brand" aria-label="Birmingham Music Stories Home">
+        <!-- SVG Emblem matching Birmingham Music Stories Heritage Archive Vinyl Device -->
+        <svg class="brand-emblem-svg" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Outer Toothed / Perforated Border -->
+          <rect x="2" y="2" width="56" height="56" fill="#131315" stroke="#f6bc62" stroke-width="2" stroke-dasharray="3,2" />
+          <!-- Concentric Vinyl Grooves -->
+          <circle cx="30" cy="30" r="22" stroke="#b88636" stroke-width="0.75" />
+          <circle cx="30" cy="30" r="18" stroke="#f6bc62" stroke-width="0.75" />
+          <circle cx="30" cy="30" r="14" stroke="#b88636" stroke-width="0.75" />
+          <!-- Center Red Record Label -->
+          <circle cx="30" cy="30" r="9" fill="#9b2226" />
+          <!-- Spindle Hole -->
+          <circle cx="30" cy="30" r="3" fill="#0a0a0c" stroke="#f6bc62" stroke-width="0.5" />
+        </svg>
+
+        <div class="brand-text">
+          <div class="brand-title">
+            <span>BIRMINGHAM</span>
+            <span class="specimen-tag tag-brass" style="font-size: 0.6rem; padding: 0.1rem 0.35rem;">ARCHIVE</span>
+          </div>
+          <span class="brand-tagline-micro">MUSIC STORIES • EST. 1968</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="site-nav" role="navigation" aria-label="Exhibition navigation">
+        <a href="#editorial-intro" class="nav-link">Introduction</a>
+        <a href="#featured-stories" class="nav-link">Explore by Sound</a>
+        <a href="#sound-map" class="nav-link">Sound Map</a>
+        <a href="#timeline-section" class="nav-link">Music Through Time</a>
+      </nav>
+
+      <!-- Header Action Items -->
+      <div class="header-actions">
+        <div class="exhibition-edition-tag" aria-hidden="true">
+          <span>EXHIBITION NO. 042</span>
+          <span style="opacity: 0.4;">•</span>
+          <span>SPRING 2024</span>
+        </div>
+        <div class="audio-indicator" aria-live="polite">
+          <span class="pulse-dot"></span>
+          <span>AUDIO DECK READY</span>
+        </div>
+        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-label="Mobile Navigation">
+    <a href="#editorial-intro" class="nav-link">Introduction</a>
+    <a href="#featured-stories" class="nav-link">Explore by Sound &amp; Stories</a>
+    <a href="#sound-map" class="nav-link">Birmingham Sound Map</a>
+    <a href="#timeline-section" class="nav-link">Music Through Time</a>
+  </div>
+
+  <main role="main">
+
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" aria-labelledby="hero-main-heading">
+      <div class="hero-bg-texture" aria-hidden="true"></div>
+      <div class="hero-foundry-glow" aria-hidden="true"></div>
+
+      <div class="site-container">
+        
+        <!-- Archival Accession Status Header -->
+        <div class="hero-meta-bar">
+          <div class="specimen-tag tag-brass">
+            <span class="pulse-dot crimson"></span>
+            <span>CAT NO. 0121-BMS // EXHIBITION MASTER ARCHIVE</span>
+          </div>
+          <div class="font-mono-tag text-dim">
+            <span>LAT: 52.4862° N</span>
+            <span class="text-brass" style="margin: 0 0.5rem;">•</span>
+            <span>LONG: 1.8904° W</span>
+            <span class="text-brass" style="margin: 0 0.5rem;">•</span>
+            <span class="text-brass">CITY OF A THOUSAND TRADES</span>
+          </div>
+        </div>
+
+        <!-- Main Title & Tagline Grid -->
+        <div class="hero-title-grid">
+          <div>
+            <h1 class="hero-main-title" id="hero-main-heading">
+              BIRMINGHAM<br />
+              <span class="highlight-line">MUSIC</span>
+              STORIES
+            </h1>
+          </div>
+          <div>
+            <p class="hero-lead-text">
+              <strong>The sounds, people and places that helped shape a city.</strong>
+              An interactive digital exhibition celebrating Birmingham's musical heritage through its artists, genres, neighbourhoods, and venues.
+            </p>
+            <div class="hero-ctas">
+              <a href="#featured-stories" class="btn-primary">
+                <span>EXPLORE THE STORIES</span>
+                <span aria-hidden="true">↓</span>
+              </a>
+              <a href="#sound-map" class="btn-secondary">
+                <span>VIEW SOUND MAP</span>
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Silk-screen / Archival Visual Mosaic (Pure SVG / CSS Artwork) -->
+        <div class="hero-mosaic" aria-label="Visual Exhibition Plates">
+          
+          <!-- Large Plate: Aston Foundry Anvil & Metal Roots -->
+          <div class="mosaic-plate mosaic-plate-main">
+            <svg class="exhibition-art-canvas" viewBox="0 0 700 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="700" height="400" fill="#141418" />
+              <!-- Industrial Graphic Lines -->
+              <line x1="0" y1="120" x2="700" y2="120" stroke="#2a2930" stroke-width="1" />
+              <line x1="0" y1="240" x2="700" y2="240" stroke="#2a2930" stroke-width="1" />
+              <!-- Canal Curve and Gear Matrix -->
+              <circle cx="350" cy="200" r="140" fill="none" stroke="#2c2b33" stroke-width="2" />
+              <circle cx="350" cy="200" r="100" fill="none" stroke="#f6bc62" stroke-width="1.5" stroke-dasharray="8,4" />
+              <circle cx="350" cy="200" r="50" fill="#1e1e24" stroke="#9b2226" stroke-width="2" />
+              <!-- Heavy Industrial Factory Skyline Silhouette -->
+              <polygon points="40,360 40,240 70,220 70,240 100,220 100,280 160,260 210,360" fill="#0d0d10" opacity="0.9" />
+              <polygon points="480,360 520,200 550,200 570,260 620,240 660,360" fill="#0d0d10" opacity="0.9" />
+              <text x="350" y="206" font-family="'Syne', sans-serif" font-weight="800" font-size="18" fill="#f4efe6" text-anchor="middle" letter-spacing="4">ASTON FORGE</text>
+            </svg>
+            <div class="mosaic-overlay-info">
+              <div>
+                <span class="font-mono-tag text-brass">PLATE 01 // INDUSTRIAL ROOTS</span>
+                <h2 class="mosaic-title">Aston &amp; The Forge of Sound</h2>
+              </div>
+              <span class="specimen-tag">1968 ARCHIVE</span>
+            </div>
+          </div>
+
+          <!-- Stack of 2 Plates: Handsworth Reggae & Rum Runner New Wave -->
+          <div class="mosaic-sub-stack">
+            
+            <div class="mosaic-plate">
+              <svg class="exhibition-art-canvas" viewBox="0 0 500 220" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="500" height="220" fill="#16151a" />
+                <rect x="40" y="40" width="80" height="130" fill="#201f26" stroke="#f6bc62" stroke-width="1.5" />
+                <circle cx="80" cy="80" r="22" fill="#0e0e11" stroke="#f6bc62" stroke-width="1.5" />
+                <circle cx="80" cy="80" r="8" fill="#9b2226" />
+                <circle cx="80" cy="135" r="26" fill="#0e0e11" stroke="#f6bc62" stroke-width="1.5" />
+                <circle cx="80" cy="135" r="10" fill="#f6bc62" />
+                <!-- Bass Sound Waves -->
+                <path d="M 150,60 Q 220,105 150,150" fill="none" stroke="#f6bc62" stroke-width="3" stroke-linecap="round" />
+                <path d="M 180,45 Q 260,105 180,165" fill="none" stroke="#9b2226" stroke-width="2.5" stroke-linecap="round" />
+                <path d="M 210,30 Q 300,105 210,180" fill="none" stroke="#f6bc62" stroke-width="1.5" stroke-dasharray="4,4" />
+              </svg>
+              <div class="mosaic-overlay-info">
+                <div>
+                  <span class="font-mono-tag text-brass">PLATE 02 // SOUND SYSTEMS</span>
+                  <h3 class="mosaic-title" style="font-size: 1.05rem;">Handsworth Reggae Culture</h3>
+                </div>
+                <span class="specimen-tag tag-crimson">HANDSWORTH</span>
+              </div>
+            </div>
+
+            <div class="mosaic-plate">
+              <svg class="exhibition-art-canvas" viewBox="0 0 500 220" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="500" height="220" fill="#131217" />
+                <!-- Synthesizer wave and nightclub neon lines -->
+                <path d="M 20,110 Q 70,30 120,110 T 220,110 T 320,110 T 420,110" fill="none" stroke="#f6bc62" stroke-width="2.5" />
+                <line x1="20" y1="130" x2="480" y2="130" stroke="#9b2226" stroke-width="1.5" />
+                <polygon points="340,30 460,20 420,80" fill="#9b2226" opacity="0.35" />
+              </svg>
+              <div class="mosaic-overlay-info">
+                <div>
+                  <span class="font-mono-tag text-brass">PLATE 03 // NEW WAVE</span>
+                  <h3 class="mosaic-title" style="font-size: 1.05rem;">The Rum Runner Residency</h3>
+                </div>
+                <span class="specimen-tag">BROAD STREET</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Curated Movement Quick Strip -->
+        <div class="genre-marquee-bar" aria-label="Explore musical categories">
+          <div class="genre-marquee-label">
+            <span class="pulse-dot"></span>
+            <span>FIVE CANONICAL GENRES:</span>
+          </div>
+          <div class="genre-marquee-list">
+            <span class="marquee-genre-pill" onclick="window.triggerGenreFilter('metal')">Heavy Metal</span>
+            <span class="text-brass">•</span>
+            <span class="marquee-genre-pill" onclick="window.triggerGenreFilter('reggae')">Reggae</span>
+            <span class="text-brass">•</span>
+            <span class="marquee-genre-pill" onclick="window.triggerGenreFilter('newwave')">New Wave</span>
+            <span class="text-brass">•</span>
+            <span class="marquee-genre-pill" onclick="window.triggerGenreFilter('bhangra')">Bhangra</span>
+            <span class="text-brass">•</span>
+            <span class="marquee-genre-pill" onclick="window.triggerGenreFilter('rockpop')">Rock &amp; Pop</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         EDITORIAL CURATORIAL INTRODUCTION
+         Explains that Birmingham's musical history was shaped by its
+         neighbourhoods, venues, communities and changing musical movements.
+         ========================================================================== -->
+    <section class="section-wrapper" id="editorial-intro" aria-labelledby="intro-heading">
+      <div class="site-container">
+        
+        <div class="intro-grid">
+          
+          <!-- Left Column: Curatorial Notice -->
+          <div>
+            <div class="specimen-tag tag-brass">
+              <span>01 // CURATORIAL FOREWORD</span>
+            </div>
+            <h2 class="font-editorial-heading" id="intro-heading" style="font-size: 1.85rem; margin-top: 0.75rem;">
+              Shaped by Neighbourhoods, Venues &amp; Communities
+            </h2>
+
+            <div class="intro-dossier-card">
+              <span class="font-mono-tag text-brass" style="display: block; margin-bottom: 0.5rem;">EXHIBITION THESIS</span>
+              <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.65;">
+                Birmingham’s musical history was not accidental. It was shaped directly by its distinct neighbourhoods, historic venues, multicultural communities, and rapidly changing musical movements.
+              </p>
+              <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-subtle); display: flex; justify-content: space-between;" class="font-mono-tag">
+                <span class="text-dim">CURATOR FILE:</span>
+                <span class="text-brass">BMS-FOREWORD-01</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Narrative Essay & Ledger Grid -->
+          <div>
+            <blockquote class="intro-monumental-quote">
+              “From the heavy industrial foundries of Aston to the community sound systems of Handsworth, Birmingham transformed its urban landscape into world-changing sonic culture.”
+            </blockquote>
+
+            <p class="intro-body-copy">
+              Birmingham's story is one of sonic innovation and social resistance. In Aston, the heavy mechanical rhythms of industrial manufacture directly influenced the birth of Heavy Metal. In Handsworth, sound systems provided both cultural sanctuary and political consciousness for multiracial youth, giving rise to globally recognized British reggae. In city centre clubs like the Rum Runner, synth-drenched New Wave took flight, while Soho Road and local halls became the beating heart of UK Bhangra.
+            </p>
+
+            <!-- Ledger Grid -->
+            <div class="stats-ledger-grid" aria-label="Archive Statistics">
+              <div class="ledger-item">
+                <span class="ledger-num">5</span>
+                <span class="ledger-label">Musical Movements</span>
+                <span class="ledger-sub">Metal to Bhangra</span>
+              </div>
+              <div class="ledger-item">
+                <span class="ledger-num">1968</span>
+                <span class="ledger-label">Founding Milestone</span>
+                <span class="ledger-sub">Aston beginnings</span>
+              </div>
+              <div class="ledger-item">
+                <span class="ledger-num">4</span>
+                <span class="ledger-label">Core Districts</span>
+                <span class="ledger-sub">Aston to Broad St</span>
+              </div>
+              <div class="ledger-item">
+                <span class="ledger-num">100%</span>
+                <span class="ledger-label">Authentic Heritage</span>
+                <span class="ledger-sub">Supplied history</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         FEATURE 1 & FEATURED MUSIC STORIES: EXPLORE BY SOUND
+         Five musical categories: Heavy Metal, Reggae, New Wave, Bhangra, Rock & Pop
+         ========================================================================== -->
+    <section class="section-wrapper" id="featured-stories" aria-labelledby="stories-heading" style="background-color: var(--bg-darkest);">
+      <div class="site-container">
+        
+        <!-- Section Header with Genre Controls -->
+        <div class="section-header-row">
+          <div>
+            <div class="specimen-tag tag-brass">
+              <span>02 // EXPLORE BY SOUND</span>
+            </div>
+            <h2 class="section-headline" id="stories-heading">
+              Featured Music Stories
+            </h2>
+            <p class="section-desc">
+              Select a genre to dynamically filter the exhibition stories. Each card represents an authenticated chapter in Birmingham’s music heritage.
+            </p>
+          </div>
+
+          <!-- Five Visually Distinctive Genre Controls -->
+          <div class="genre-filter-nav" role="group" aria-label="Filter stories by genre">
+            <button class="genre-filter-btn active" data-filter="all" aria-pressed="true">
+              <span class="genre-indicator-dot"></span>
+              <span>All Genres (6)</span>
+            </button>
+            <button class="genre-filter-btn" data-filter="metal" aria-pressed="false">
+              <span class="genre-indicator-dot" style="background-color: var(--accent-brass);"></span>
+              <span>Heavy Metal</span>
+            </button>
+            <button class="genre-filter-btn" data-filter="reggae" aria-pressed="false">
+              <span class="genre-indicator-dot" style="background-color: var(--accent-brass-burnished);"></span>
+              <span>Reggae</span>
+            </button>
+            <button class="genre-filter-btn" data-filter="newwave" aria-pressed="false">
+              <span class="genre-indicator-dot" style="background-color: var(--accent-crimson);"></span>
+              <span>New Wave</span>
+            </button>
+            <button class="genre-filter-btn" data-filter="bhangra" aria-pressed="false">
+              <span class="genre-indicator-dot" style="background-color: #e59866;"></span>
+              <span>Bhangra</span>
+            </button>
+            <button class="genre-filter-btn" data-filter="rockpop" aria-pressed="false">
+              <span class="genre-indicator-dot" style="background-color: #85929e;"></span>
+              <span>Rock &amp; Pop</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter Count Feedback -->
+        <div style="margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between;">
+          <span class="font-mono-tag text-brass" id="active-filter-status">DISPLAYING: ALL GENRES (6 SPECIMENS)</span>
+          <span class="font-mono-tag text-dim">CLICK ANY STORY TO VIEW FULL DOSSIER</span>
+        </div>
+
+        <!-- Dynamic Stories Grid (Rendered by script.js) -->
+        <div class="stories-grid" id="stories-grid" role="region" aria-live="polite">
+          <!-- Story cards injected here -->
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         FEATURE 2: BIRMINGHAM SOUND MAP
+         Stylized graphical representation of Birmingham using HTML/CSS/SVG.
+         Clickable locations for: Aston, Handsworth, City Centre, Broad Street.
+         ========================================================================== -->
+    <section class="section-wrapper" id="sound-map" aria-labelledby="sound-map-heading">
+      <div class="site-container">
+        
+        <div class="section-header-row">
+          <div>
+            <div class="specimen-tag tag-brass">
+              <span>03 // TOPOGRAPHY OF SOUND</span>
+            </div>
+            <h2 class="section-headline" id="sound-map-heading">
+              Birmingham Sound Map
+            </h2>
+            <p class="section-desc">
+              An artistic, exhibition-like graphical representation of Birmingham. Explore how the city’s geography, canals, and neighbourhoods shaped its musical movements.
+            </p>
+          </div>
+
+          <div class="specimen-tag">
+            <span class="pulse-dot"></span>
+            <span>CLICK A DISTRICT PIN TO INSPECT HISTORICAL DOSSIER</span>
+          </div>
+        </div>
+
+        <!-- Map & Dossier Split Stage -->
+        <div class="map-layout-grid">
+          
+          <!-- Left: Vector SVG Artistic Sound Map -->
+          <div class="sound-map-stage">
+            
+            <div class="map-top-bar">
+              <div style="display: flex; align-items: center; gap: 1rem;" class="font-mono-tag">
+                <span style="display: flex; align-items: center; gap: 0.35rem;">
+                  <span style="width: 8px; height: 8px; background: var(--accent-brass); display: inline-block;"></span>
+                  METAL / ROCK
+                </span>
+                <span style="display: flex; align-items: center; gap: 0.35rem;">
+                  <span style="width: 8px; height: 8px; background: var(--accent-crimson); display: inline-block;"></span>
+                  REGGAE / CLUBS
+                </span>
+              </div>
+              <span class="font-mono-tag text-brass">CANAL BASIN &amp; DISTRICT REPERTORY</span>
+            </div>
+
+            <!-- Stylized SVG Map of Birmingham -->
+            <div class="map-svg-container">
+              <svg class="map-vector-svg" viewBox="0 0 650 380" xmlns="http://www.w3.org/2000/svg" role="region" aria-label="Interactive Sound Map of Birmingham">
+                <defs>
+                  <!-- Map grid pattern -->
+                  <pattern id="archival-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+                    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#25242b" stroke-width="0.75" />
+                  </pattern>
+                </defs>
+                
+                <rect width="650" height="380" fill="url(#archival-grid)" />
+                
+                <!-- Birmingham Canal Navigations (BCN) & Gas Street Basin Arteries -->
+                <!-- Main Canal Line -->
+                <path d="M 30,160 Q 180,210 320,200 T 520,180 T 630,220" fill="none" stroke="#b88636" stroke-width="2.5" stroke-dasharray="6,3" opacity="0.8" />
+                <!-- Aston Spur Canal -->
+                <path d="M 280,30 Q 320,110 320,200 T 420,340" fill="none" stroke="#9b2226" stroke-width="2" opacity="0.7" />
+                <!-- Handsworth Railway Line -->
+                <line x1="120" y1="30" x2="320" y2="200" stroke="#4a4955" stroke-width="1.5" stroke-dasharray="2,4" />
+                
+                <!-- District Area Contours (Abstract) -->
+                <circle cx="340" cy="80" r="45" fill="#f6bc62" fill-opacity="0.04" stroke="#f6bc62" stroke-width="1" stroke-dasharray="3,3" />
+                <circle cx="150" cy="110" r="50" fill="#9b2226" fill-opacity="0.04" stroke="#9b2226" stroke-width="1" stroke-dasharray="3,3" />
+                <circle cx="330" cy="220" r="55" fill="#f6bc62" fill-opacity="0.04" stroke="#f6bc62" stroke-width="1" stroke-dasharray="3,3" />
+                <circle cx="260" cy="270" r="40" fill="#9b2226" fill-opacity="0.04" stroke="#9b2226" stroke-width="1" stroke-dasharray="3,3" />
+
+                <!-- Location Pin 1: ASTON (Top Right / North) -->
+                <g class="map-location-group active" data-location="aston" tabindex="0" role="button" aria-label="Aston Sound Map Location">
+                  <circle cx="340" cy="80" r="22" class="pin-ring" fill="none" stroke="var(--accent-brass)" stroke-width="1.5" opacity="0.6" />
+                  <circle cx="340" cy="80" r="10" class="pin-core" fill="var(--accent-brass)" />
+                  <text x="340" y="115" class="map-pin-label">ASTON</text>
+                  <text x="340" y="128" font-family="'Space Mono', monospace" font-size="8" fill="#8e877e" text-anchor="middle">BLACK SABBATH</text>
+                </g>
+
+                <!-- Location Pin 2: HANDSWORTH (North-West) -->
+                <g class="map-location-group" data-location="handsworth" tabindex="0" role="button" aria-label="Handsworth Sound Map Location">
+                  <circle cx="150" cy="110" r="22" class="pin-ring" fill="none" stroke="var(--accent-brass)" stroke-width="1.5" opacity="0.6" />
+                  <circle cx="150" cy="110" r="10" class="pin-core" fill="var(--accent-brass-burnished)" />
+                  <text x="150" y="145" class="map-pin-label">HANDSWORTH</text>
+                  <text x="150" y="158" font-family="'Space Mono', monospace" font-size="8" fill="#8e877e" text-anchor="middle">STEEL PULSE</text>
+                </g>
+
+                <!-- Location Pin 3: BROAD STREET (South-West Central) -->
+                <g class="map-location-group" data-location="broad-street" tabindex="0" role="button" aria-label="Broad Street Sound Map Location">
+                  <circle cx="260" cy="270" r="22" class="pin-ring" fill="none" stroke="var(--accent-brass)" stroke-width="1.5" opacity="0.6" />
+                  <circle cx="260" cy="270" r="10" class="pin-core" fill="var(--accent-crimson)" />
+                  <text x="260" y="305" class="map-pin-label">BROAD STREET</text>
+                  <text x="260" y="318" font-family="'Space Mono', monospace" font-size="8" fill="#8e877e" text-anchor="middle">RUM RUNNER</text>
+                </g>
+
+                <!-- Location Pin 4: CITY CENTRE (Central) -->
+                <g class="map-location-group" data-location="city-centre" tabindex="0" role="button" aria-label="City Centre Sound Map Location">
+                  <circle cx="340" cy="220" r="22" class="pin-ring" fill="none" stroke="var(--accent-brass)" stroke-width="1.5" opacity="0.6" />
+                  <circle cx="340" cy="220" r="10" class="pin-core" fill="var(--accent-brass)" />
+                  <text x="340" y="255" class="map-pin-label">CITY CENTRE</text>
+                  <text x="340" y="268" font-family="'Space Mono', monospace" font-size="8" fill="#8e877e" text-anchor="middle">ELO &amp; UB40</text>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Tab strip for direct keyboard & mobile tap -->
+            <div class="map-node-selector-strip" role="tablist" aria-label="Sound map locations">
+              <button class="map-tab-btn active" data-location="aston" role="tab">
+                <span class="map-tab-name">Aston</span>
+                <span class="map-tab-sub">Heavy Metal Forge</span>
+              </button>
+              <button class="map-tab-btn" data-location="handsworth" role="tab">
+                <span class="map-tab-name">Handsworth</span>
+                <span class="map-tab-sub">Reggae &amp; Roots</span>
+              </button>
+              <button class="map-tab-btn" data-location="broad-street" role="tab">
+                <span class="map-tab-name">Broad Street</span>
+                <span class="map-tab-sub">The Rum Runner</span>
+              </button>
+              <button class="map-tab-btn" data-location="city-centre" role="tab">
+                <span class="map-tab-name">City Centre</span>
+                <span class="map-tab-sub">Venues &amp; ELO</span>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Right: Location Story Panel / Dossier Drawer -->
+          <div class="map-dossier-panel" id="map-dossier-panel" role="region" aria-live="polite">
+            <div>
+              <div class="dossier-header">
+                <span class="specimen-tag tag-crimson" id="map-dossier-cat">MAP-LOC-01</span>
+                <span class="font-mono-tag text-brass">DISTRICT DOSSIER</span>
+              </div>
+
+              <!-- Artwork visual for the location -->
+              <div class="dossier-artwork-preview" id="map-dossier-artwork">
+                <!-- SVG inserted dynamically -->
+              </div>
+
+              <h3 class="dossier-title" id="map-dossier-title">Aston</h3>
+              <p class="dossier-description" id="map-dossier-desc">
+                Aston's industrial backdrop and community spaces were the birthplace of Black Sabbath in 1968, setting the foundation for heavy metal's emergence.
+              </p>
+
+              <div class="dossier-metadata-table">
+                <div class="dossier-row">
+                  <span class="label">Primary Artists:</span>
+                  <span class="val" id="map-dossier-artists">Black Sabbath</span>
+                </div>
+                <div class="dossier-row">
+                  <span class="label">Associated Genre:</span>
+                  <span class="val" id="map-dossier-genre">Heavy Metal</span>
+                </div>
+                <div class="dossier-row">
+                  <span class="label">Key Landmark:</span>
+                  <span class="val" id="map-dossier-landmark">Foundries &amp; Aston Community</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <button class="btn-primary" style="width: 100%;" onclick="window.triggerGenreFilter('metal')">
+                <span>VIEW STORIES FROM THIS DISTRICT</span>
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         MUSIC THROUGH TIME: INTERACTIVE VISUAL TIMELINE
+         Contains:
+         1968 — Black Sabbath / Heavy Metal
+         1970s — Electric Light Orchestra
+         1978 — UB40
+         1978 — Duran Duran
+         Later Birmingham music — general continuation
+         ========================================================================== -->
+    <section class="section-wrapper" id="timeline-section" aria-labelledby="timeline-heading" style="background-color: var(--bg-darkest);">
+      <div class="site-container">
+        
+        <div class="section-header-row">
+          <div>
+            <div class="specimen-tag tag-brass">
+              <span>04 // CHRONOLOGICAL SEQUENCE</span>
+            </div>
+            <h2 class="section-headline" id="timeline-heading">
+              Music Through Time
+            </h2>
+            <p class="section-desc">
+              Follow Birmingham’s milestone musical moments across the decades. Click or hover any timeline era to inspect the artist and historical context.
+            </p>
+          </div>
+
+          <!-- Timeline Scrubber Navigation Buttons -->
+          <div class="timeline-scrubber-controls">
+            <button class="timeline-nav-btn" id="timeline-prev" aria-label="Scroll timeline left">
+              <span aria-hidden="true">←</span>
+            </button>
+            <span class="font-mono-tag text-brass" style="margin: 0 0.5rem;">SCROLL TIMELINE</span>
+            <button class="timeline-nav-btn" id="timeline-next" aria-label="Scroll timeline right">
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Horizontal Scrollable Timeline Strip -->
+        <div class="timeline-horizontal-track" id="timeline-track" role="region" aria-label="Horizontal Music Timeline">
+          
+          <!-- Milestone 1: 1968 -->
+          <div class="timeline-node-card selected" data-story-id="black-sabbath" tabindex="0" role="button" aria-label="1968 Black Sabbath milestone">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <span class="timeline-year-callout">1968</span>
+                <span class="specimen-tag tag-brass">ASTON</span>
+              </div>
+              <div class="timeline-card-artwork">
+                <svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect width="300" height="120" fill="#17171d" />
+                  <polygon points="150,10 165,55 195,55 140,110 155,65 125,65" fill="#f6bc62" />
+                  <circle cx="150" cy="60" r="45" fill="none" stroke="#9b2226" stroke-width="1.5" />
+                </svg>
+              </div>
+              <h3 class="timeline-card-title">Black Sabbath / Heavy Metal</h3>
+              <p class="timeline-card-desc">
+                Black Sabbath formed in Aston in 1968 and became one of the groups most closely associated with the emergence of heavy metal.
+              </p>
+            </div>
+            <div class="timeline-rail-footer">
+              <span>ERA 01</span>
+              <span class="text-brass">INSPECT STORY →</span>
+            </div>
+          </div>
+
+          <!-- Milestone 2: 1970s -->
+          <div class="timeline-node-card" data-story-id="electric-light-orchestra" tabindex="0" role="button" aria-label="Early 1970s Electric Light Orchestra milestone">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <span class="timeline-year-callout" style="color: var(--text-main);">1970s</span>
+                <span class="specimen-tag">BIRMINGHAM</span>
+              </div>
+              <div class="timeline-card-artwork">
+                <svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect width="300" height="120" fill="#16161c" />
+                  <circle cx="150" cy="60" r="45" fill="none" stroke="#f6bc62" stroke-width="1.5" />
+                  <circle cx="150" cy="60" r="25" fill="#201f29" stroke="#9b2226" stroke-width="1.5" />
+                  <circle cx="150" cy="60" r="10" fill="#f6bc62" />
+                </svg>
+              </div>
+              <h3 class="timeline-card-title">Electric Light Orchestra</h3>
+              <p class="timeline-card-desc">
+                Electric Light Orchestra emerged from Birmingham and combined rock and pop songwriting with orchestral arrangements.
+              </p>
+            </div>
+            <div class="timeline-rail-footer">
+              <span>ERA 02</span>
+              <span class="text-brass">INSPECT STORY →</span>
+            </div>
+          </div>
+
+          <!-- Milestone 3: 1978 (UB40) -->
+          <div class="timeline-node-card" data-story-id="ub40" tabindex="0" role="button" aria-label="1978 UB40 milestone">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <span class="timeline-year-callout">1978</span>
+                <span class="specimen-tag tag-crimson">REGGAE</span>
+              </div>
+              <div class="timeline-card-artwork">
+                <svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect width="300" height="120" fill="#15151a" />
+                  <rect x="70" y="20" width="60" height="80" fill="#1e1e26" stroke="#f6bc62" stroke-width="1.5" />
+                  <circle cx="100" cy="45" r="14" fill="#0d0d10" stroke="#f6bc62" stroke-width="1" />
+                  <circle cx="100" cy="75" r="18" fill="#0d0d10" stroke="#f6bc62" stroke-width="1" />
+                  <path d="M 150,40 Q 200,60 150,80" fill="none" stroke="#9b2226" stroke-width="2.5" />
+                </svg>
+              </div>
+              <h3 class="timeline-card-title">UB40 Forms in Birmingham</h3>
+              <p class="timeline-card-desc">
+                UB40 formed in Birmingham in 1978 and took a distinctly Birmingham reggae sound to an international audience.
+              </p>
+            </div>
+            <div class="timeline-rail-footer">
+              <span>ERA 03A</span>
+              <span class="text-brass">INSPECT STORY →</span>
+            </div>
+          </div>
+
+          <!-- Milestone 4: 1978 (Duran Duran) -->
+          <div class="timeline-node-card" data-story-id="duran-duran" tabindex="0" role="button" aria-label="1978 Duran Duran milestone">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <span class="timeline-year-callout" style="color: var(--accent-brass-burnished);">1978</span>
+                <span class="specimen-tag">NEW WAVE</span>
+              </div>
+              <div class="timeline-card-artwork">
+                <svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect width="300" height="120" fill="#131218" />
+                  <path d="M 30,60 Q 70,20 110,60 T 190,60 T 270,60" fill="none" stroke="#f6bc62" stroke-width="2" />
+                  <line x1="30" y1="80" x2="270" y2="80" stroke="#9b2226" stroke-width="1.5" />
+                </svg>
+              </div>
+              <h3 class="timeline-card-title">Duran Duran at The Rum Runner</h3>
+              <p class="timeline-card-desc">
+                Duran Duran formed in Birmingham in 1978 and developed around the city's Rum Runner nightclub before becoming internationally successful.
+              </p>
+            </div>
+            <div class="timeline-rail-footer">
+              <span>ERA 03B</span>
+              <span class="text-brass">INSPECT STORY →</span>
+            </div>
+          </div>
+
+          <!-- Milestone 5: Later Birmingham Music -->
+          <div class="timeline-node-card" style="border-style: dashed;" tabindex="0" role="button" aria-label="Later Birmingham music continuation">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <span class="timeline-year-callout" style="font-size: 1.9rem; color: var(--text-muted);">LATER</span>
+                <span class="specimen-tag tag-brass">CONTINUATION</span>
+              </div>
+              <div class="timeline-card-artwork">
+                <svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect width="300" height="120" fill="#121216" />
+                  <!-- Radiating sonic arcs -->
+                  <circle cx="150" cy="110" r="20" fill="none" stroke="#f6bc62" stroke-width="1.5" stroke-dasharray="3,3" />
+                  <circle cx="150" cy="110" r="45" fill="none" stroke="#f6bc62" stroke-width="1.5" stroke-dasharray="4,4" />
+                  <circle cx="150" cy="110" r="75" fill="none" stroke="#9b2226" stroke-width="1.5" stroke-dasharray="5,5" />
+                  <circle cx="150" cy="110" r="105" fill="none" stroke="#b88636" stroke-width="1.5" stroke-dasharray="6,6" />
+                </svg>
+              </div>
+              <h3 class="timeline-card-title">Later Birmingham Music</h3>
+              <p class="timeline-card-desc">
+                Birmingham's musical legacy continued to evolve across the decades—spanning Soho Road Bhangra, electronic clubs, and contemporary grassroots communities across the city.
+              </p>
+            </div>
+            <div class="timeline-rail-footer">
+              <span>CONTINUING SOUNDTRACK</span>
+              <span class="text-dim">HERITAGE ARCHIVE</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         CONCLUDING MANIFESTO SECTION
+         ========================================================================== -->
+    <section class="manifesto-section" aria-label="Archive manifesto">
+      <div class="site-container manifesto-content">
+        <div class="specimen-tag tag-brass">
+          <span>EXHIBITION SUMMARY</span>
+        </div>
+        <h2 class="manifesto-title">
+          Every City Has a Soundtrack.<br />
+          <span class="text-brass">This One Helped Shape Modern Music.</span>
+        </h2>
+        <p class="manifesto-desc">
+          Birmingham Music Stories celebrates the neighbourhoods, musicians, and communities who forged revolutionary sounds out of an industrial heartland.
+        </p>
+        <div class="manifesto-actions">
+          <a href="#featured-stories" class="btn-primary">
+            <span>EXPLORE FEATURED STORIES</span>
+            <span aria-hidden="true">↑</span>
+          </a>
+          <a href="#sound-map" class="btn-secondary">
+            <span>EXPLORE SOUND MAP</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ==========================================================================
+         FEATURE 3: STORY VIEW MODAL
+         Expand or open an elegant modal/panel containing:
+         artist name, location, genre, era/year, short description, clear close/back
+         ========================================================================== -->
+  <div class="story-modal-overlay" id="story-modal" role="dialog" aria-modal="true" aria-labelledby="modal-artist">
+    <div class="story-modal-dialog">
+      
+      <!-- Modal Header -->
+      <div class="modal-header-bar">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span class="specimen-tag tag-brass" id="modal-catalog">BMS-HM-01</span>
+          <span class="font-mono-tag text-brass">CURATORIAL CASE DOSSIER</span>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close story panel">
+          <span aria-hidden="true">✕</span>
+        </button>
+      </div>
+
+      <!-- Hero Visual Art Placeholder -->
+      <div class="modal-hero-artwork" id="modal-artwork" aria-hidden="true">
+        <!-- Injected via script.js -->
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-content-body">
+        
+        <h2 class="modal-artist-title" id="modal-artist">Artist Name</h2>
+
+        <!-- Specifications Grid -->
+        <div class="modal-spec-grid">
+          <div class="modal-spec-cell">
+            <span class="key">Origin / Location</span>
+            <span class="val" id="modal-location">Location</span>
+          </div>
+          <div class="modal-spec-cell">
+            <span class="key">Primary Genre</span>
+            <span class="val" id="modal-genre">Genre</span>
+          </div>
+          <div class="modal-spec-cell">
+            <span class="key">Era / Year Formed</span>
+            <span class="val" id="modal-year">Year</span>
+          </div>
+          <div class="modal-spec-cell">
+            <span class="key">Archive Record</span>
+            <span class="val" style="color: var(--accent-crimson);">AUTHENTICATED</span>
+          </div>
+        </div>
+
+        <!-- Description Copy (Strictly adhering to supplied copy) -->
+        <div class="modal-narrative-copy" id="modal-description">
+          Story description goes here.
+        </div>
+
+        <!-- Actions -->
+        <div class="modal-footer-actions">
+          <button class="btn-primary" id="modal-play-audio">
+            <span>AUDIT MASTER ARCHIVE TAPE</span>
+            <span aria-hidden="true">▶</span>
+          </button>
+          <button class="btn-secondary" onclick="document.getElementById('modal-close-btn').click();">
+            <span>← BACK TO EXHIBITION</span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ==========================================================================
+       PERSISTENT FLOATING AUDIO TAPE DECK BAR
+       ========================================================================== -->
+  <aside class="audio-deck-bar" id="audio-deck" aria-label="Exhibition audio deck">
+    <div class="deck-left">
+      <button class="deck-transport-btn" id="deck-play-btn" aria-label="Play master audio preview">
+        <span aria-hidden="true">▶</span>
+      </button>
+      <div class="deck-track-info">
+        <span class="deck-track-label">ARCHIVE REEL #01</span>
+        <span class="deck-track-title" id="deck-track-title">BLACK SABBATH — ASTON FOUNDRY MASTER (1968 SESSION)</span>
+      </div>
+    </div>
+
+    <!-- Frequency Waveform Animation -->
+    <div class="deck-frequency-bars" aria-hidden="true">
+      <div class="freq-bar"></div>
+      <div class="freq-bar"></div>
+      <div class="freq-bar"></div>
+      <div class="freq-bar"></div>
+      <div class="freq-bar"></div>
+      <div class="freq-bar"></div>
+      <div class="freq-bar"></div>
+      <div class="freq-bar"></div>
+    </div>
+
+    <div class="deck-right">
+      <span class="deck-cat-no" id="deck-cat-no">SPECIMEN BMS-HM-01</span>
+      <button class="deck-close-btn" id="deck-dismiss-btn" aria-label="Dismiss audio deck">
+        <span aria-hidden="true">✕</span>
+      </button>
+    </div>
+  </aside>
+
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-container">
+      
+      <div class="footer-grid">
+        
+        <!-- Col 1: Overview -->
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <svg class="brand-emblem-svg" style="width: 2.25rem; height: 2.25rem;" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="2" y="2" width="56" height="56" fill="#131315" stroke="#f6bc62" stroke-width="2" stroke-dasharray="3,2" />
+              <circle cx="30" cy="30" r="20" stroke="#b88636" stroke-width="0.75" />
+              <circle cx="30" cy="30" r="15" stroke="#f6bc62" stroke-width="0.75" />
+              <circle cx="30" cy="30" r="9" fill="#9b2226" />
+              <circle cx="30" cy="30" r="3" fill="#0a0a0c" stroke="#f6bc62" stroke-width="0.5" />
+            </svg>
+            <span class="brand-title" style="font-size: 1.05rem;">BIRMINGHAM MUSIC STORIES</span>
+          </div>
+          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; max-width: 26rem;">
+            An interactive digital exhibition celebrating Birmingham’s musical heritage through its artists, genres, places, and historic sound map.
+          </p>
+          <div style="margin-top: 1.25rem;">
+            <span class="specimen-tag tag-brass">OPEN ACCESS HERITAGE PROJECT</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Five Canonical Genres -->
+        <div>
+          <h3 class="footer-col-title">Five Musical Categories</h3>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem;" class="font-mono-tag">
+            <li><a href="#featured-stories" onclick="window.triggerGenreFilter('metal')" class="text-muted hover:text-brass">Heavy Metal</a></li>
+            <li><a href="#featured-stories" onclick="window.triggerGenreFilter('reggae')" class="text-muted hover:text-brass">Reggae</a></li>
+            <li><a href="#featured-stories" onclick="window.triggerGenreFilter('newwave')" class="text-muted hover:text-brass">New Wave</a></li>
+            <li><a href="#featured-stories" onclick="window.triggerGenreFilter('bhangra')" class="text-muted hover:text-brass">Bhangra</a></li>
+            <li><a href="#featured-stories" onclick="window.triggerGenreFilter('rockpop')" class="text-muted hover:text-brass">Rock &amp; Pop</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Heritage Note -->
+        <div>
+          <h3 class="footer-col-title">Cultural Preservation</h3>
+          <ul class="footer-partners-list">
+            <li>
+              <div class="footer-partner-name">Neighbourhoods &amp; Venues</div>
+              <div class="footer-partner-desc">Aston, Handsworth, The Rum Runner &amp; City Centre</div>
+            </li>
+            <li>
+              <div class="footer-partner-name">Direct Hosting</div>
+              <div class="footer-partner-desc">Static HTML, CSS and Vanilla JavaScript suitable for GitHub Pages</div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <span>© Birmingham Music Stories Heritage Archive. The sounds, people and places that helped shape a city.</span>
+        <div style="display: flex; gap: 1.5rem;">
+          <span class="text-brass">ASTON</span>
+          <span class="text-brass">HANDSWORTH</span>
+          <span class="text-brass">BROAD STREET</span>
+          <span class="text-brass">CITY CENTRE</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Vanilla Interaction Engine -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
