@@ -29,8 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
       copy: 'Black Sabbath formed in Aston in 1968 and became one of the groups most closely associated with the emergence of heavy metal.',
       catalogNo: 'BMS-HM-01',
       audioTitle: 'Black Sabbath — Aston Foundry Master (1968 Session)',
-      mapNode: 'aston',
-      artTheme: 'metal'
+      mapNode: 'aston'
     },
     {
       id: 'steel-pulse',
@@ -42,8 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
       copy: 'Steel Pulse emerged from Handsworth and became internationally recognised for politically conscious reggae rooted in Birmingham\'s multicultural communities.',
       catalogNo: 'BMS-REG-01',
       audioTitle: 'Steel Pulse — Handsworth Revolution (Archival Reel)',
-      mapNode: 'handsworth',
-      artTheme: 'reggae'
+      mapNode: 'handsworth'
     },
     {
       id: 'ub40',
@@ -55,8 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       copy: 'UB40 formed in Birmingham in 1978 and took a distinctly Birmingham reggae sound to an international audience.',
       catalogNo: 'BMS-REG-02',
       audioTitle: 'UB40 — Signing Off (Birmingham 1978 Demo)',
-      mapNode: 'city-centre',
-      artTheme: 'reggae'
+      mapNode: 'city-centre'
     },
     {
       id: 'duran-duran',
@@ -68,8 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
       copy: 'Duran Duran formed in Birmingham in 1978 and developed around the city\'s Rum Runner nightclub before becoming internationally successful.',
       catalogNo: 'BMS-NW-01',
       audioTitle: 'Duran Duran — Rum Runner Rehearsal Tape (1978)',
-      mapNode: 'broad-street',
-      artTheme: 'newwave'
+      mapNode: 'broad-street'
     },
     {
       id: 'electric-light-orchestra',
@@ -81,8 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
       copy: 'Electric Light Orchestra emerged from Birmingham and combined rock and pop songwriting with orchestral arrangements.',
       catalogNo: 'BMS-RP-01',
       audioTitle: 'Electric Light Orchestra — Birmingham Symphonic Reel',
-      mapNode: 'city-centre',
-      artTheme: 'rockpop'
+      mapNode: 'city-centre'
     },
     {
       id: 'birmingham-bhangra',
@@ -94,8 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
       copy: 'Birmingham\'s musical history was shaped by its neighbourhoods and multicultural communities. Soho Road and local venues became the UK hub for Bhangra, blending traditional Punjabi folk with modern urban beats and daytime club events.',
       catalogNo: 'BMS-BH-01',
       audioTitle: 'Birmingham Bhangra — Soho Road Dhol & Cassette Archive',
-      mapNode: 'handsworth',
-      artTheme: 'bhangra'
+      mapNode: 'handsworth'
     }
   ];
 
@@ -136,112 +130,28 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   /* ==========================================================================
-     SECTION 2: DYNAMIC STORY RENDERING & ARTWORK GENERATION
-     Generates bespoke inline SVG artworks without external image dependencies.
+     SECTION 2: DYNAMIC STORY RENDERING & PHOTOGRAPHS
+     Locally stored subject photographs; no third-party image requests.
      ========================================================================== */
   const storiesGrid = document.getElementById('stories-grid');
 
-  function generateArtworkSvg(theme) {
-    switch (theme) {
-      case 'metal':
-        return `
-          <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Heavy Metal Industrial Vector Art">
-            <defs>
-              <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#1b1b1f" />
-                <stop offset="50%" stop-color="#2a2a32" />
-                <stop offset="100%" stop-color="#0e0e11" />
-              </linearGradient>
-            </defs>
-            <rect width="300" height="200" fill="url(#metalGrad)" />
-            <!-- Industrial Anvil & Lightning Silhouette -->
-            <polygon points="150,20 170,85 210,85 140,180 155,105 115,105" fill="#f6bc62" opacity="0.85" />
-            <path d="M 30,160 L 270,160 M 30,170 L 270,170 M 30,180 L 270,180" stroke="#45444e" stroke-width="1.5" />
-            <circle cx="150" cy="100" r="75" fill="none" stroke="#9b2226" stroke-width="2" stroke-dasharray="6,4" />
-            <text x="25" y="45" font-family="'Space Mono', monospace" font-size="10" fill="#8e877e" letter-spacing="2">ASTON FOUNDRY // 1968</text>
-            <text x="25" y="145" font-family="'Syne', sans-serif" font-weight="800" font-size="24" fill="#f4efe6" opacity="0.15">METAL</text>
-          </svg>
-        `;
-      case 'reggae':
-        return `
-          <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reggae Sound System Speaker Stack Vector Art">
-            <rect width="300" height="200" fill="#141418" />
-            <!-- Speaker stack silhouettes -->
-            <rect x="50" y="30" width="90" height="140" fill="#1e1e24" stroke="#f6bc62" stroke-width="1.5" />
-            <circle cx="95" cy="65" r="22" fill="#0d0d10" stroke="#f6bc62" stroke-width="2" />
-            <circle cx="95" cy="65" r="8" fill="#9b2226" />
-            <circle cx="95" cy="125" r="28" fill="#0d0d10" stroke="#f6bc62" stroke-width="2" />
-            <circle cx="95" cy="125" r="10" fill="#f6bc62" />
-            <!-- Echo soundwaves -->
-            <path d="M 160,70 Q 200,100 160,130" fill="none" stroke="#f6bc62" stroke-width="3" stroke-linecap="round" />
-            <path d="M 180,50 Q 240,100 180,150" fill="none" stroke="#9b2226" stroke-width="2.5" stroke-linecap="round" opacity="0.8" />
-            <path d="M 200,35 Q 275,100 200,165" fill="none" stroke="#f6bc62" stroke-width="2" stroke-linecap="round" opacity="0.6" stroke-dasharray="4,4" />
-            <text x="50" y="22" font-family="'Space Mono', monospace" font-size="10" fill="#8e877e" letter-spacing="2">SOUNDSYSTEM // BASSLINE</text>
-          </svg>
-        `;
-      case 'newwave':
-        return `
-          <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="New Wave Synthesizer Grid Vector Art">
-            <rect width="300" height="200" fill="#121217" />
-            <!-- Synthesizer wave and angular neon geometric -->
-            <path d="M 20,100 Q 50,30 90,100 T 170,100 T 250,100 T 290,100" fill="none" stroke="#f6bc62" stroke-width="3" />
-            <line x1="20" y1="130" x2="280" y2="130" stroke="#9b2226" stroke-width="2" />
-            <!-- Keyboard Keys -->
-            <g transform="translate(30, 140)">
-              <rect x="0" y="0" width="18" height="45" fill="#f4efe6" stroke="#121217" />
-              <rect x="18" y="0" width="18" height="45" fill="#f4efe6" stroke="#121217" />
-              <rect x="36" y="0" width="18" height="45" fill="#f4efe6" stroke="#121217" />
-              <rect x="54" y="0" width="18" height="45" fill="#f4efe6" stroke="#121217" />
-              <rect x="72" y="0" width="18" height="45" fill="#f4efe6" stroke="#121217" />
-              <rect x="90" y="0" width="18" height="45" fill="#f4efe6" stroke="#121217" />
-              <rect x="108" y="0" width="18" height="45" fill="#f4efe6" stroke="#121217" />
-              <!-- Black keys -->
-              <rect x="12" y="0" width="12" height="28" fill="#121217" />
-              <rect x="30" y="0" width="12" height="28" fill="#121217" />
-              <rect x="66" y="0" width="12" height="28" fill="#121217" />
-              <rect x="84" y="0" width="12" height="28" fill="#121217" />
-              <rect x="102" y="0" width="12" height="28" fill="#121217" />
-            </g>
-            <polygon points="180,40 260,20 230,80" fill="#9b2226" opacity="0.4" />
-            <text x="180" y="165" font-family="'Space Mono', monospace" font-size="10" fill="#f6bc62">RUM RUNNER 1978</text>
-          </svg>
-        `;
-      case 'bhangra':
-        return `
-          <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bhangra Dhol Drum and Cassette Vector Art">
-            <rect width="300" height="200" fill="#151317" />
-            <!-- Stylised Dhol Drum -->
-            <ellipse cx="150" cy="95" rx="45" ry="60" fill="#222026" stroke="#f6bc62" stroke-width="2" />
-            <ellipse cx="150" cy="95" rx="30" ry="45" fill="none" stroke="#9b2226" stroke-width="1.5" />
-            <!-- Tension Ropes -->
-            <line x1="110" y1="50" x2="190" y2="140" stroke="#f6bc62" stroke-width="1.5" stroke-dasharray="3,3" />
-            <line x1="110" y1="140" x2="190" y2="50" stroke="#f6bc62" stroke-width="1.5" stroke-dasharray="3,3" />
-            <!-- Cassette Reels -->
-            <circle cx="60" cy="140" r="14" fill="#0c0c0e" stroke="#f6bc62" stroke-width="2" />
-            <circle cx="240" cy="140" r="14" fill="#0c0c0e" stroke="#f6bc62" stroke-width="2" />
-            <line x1="60" y1="154" x2="240" y2="154" stroke="#8e877e" stroke-width="1" />
-            <text x="30" y="30" font-family="'Space Mono', monospace" font-size="10" fill="#f6bc62" letter-spacing="2">SOHO ROAD // DAYTIMERS</text>
-          </svg>
-        `;
-      case 'rockpop':
-      default:
-        return `
-          <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Symphonic Rock and Orchestra Cosmic Sphere Vector Art">
-            <rect width="300" height="200" fill="#111116" />
-            <!-- Concentric Spaceship & Orchestral Rings -->
-            <circle cx="150" cy="100" r="75" fill="none" stroke="#f6bc62" stroke-width="2" />
-            <circle cx="150" cy="100" r="55" fill="none" stroke="#9b2226" stroke-width="1.5" />
-            <circle cx="150" cy="100" r="35" fill="#1b1a24" stroke="#f6bc62" stroke-width="2" />
-            <circle cx="150" cy="100" r="15" fill="#f6bc62" />
-            <!-- Violin/Cello Strings -->
-            <line x1="20" y1="40" x2="280" y2="40" stroke="#4a4955" stroke-width="1" />
-            <line x1="20" y1="46" x2="280" y2="46" stroke="#4a4955" stroke-width="1" />
-            <line x1="20" y1="52" x2="280" y2="52" stroke="#4a4955" stroke-width="1" />
-            <line x1="20" y1="58" x2="280" y2="58" stroke="#4a4955" stroke-width="1" />
-            <text x="25" y="180" font-family="'Space Mono', monospace" font-size="10" fill="#f6bc62" letter-spacing="2">SYMPHONIC POP // ELO 1970</text>
-          </svg>
-        `;
-    }
+  // Source, creator, licence and actual photo dates: assets/images/credits.json.
+  const archivePhotos = {
+    "black-sabbath": { src: new URL("./assets/images/artists/black-sabbath-1970.jpg", import.meta.url).href, alt: "Black Sabbath in London, 1970", width: 759, height: 490 },
+    "steel-pulse": { src: new URL("./assets/images/artists/steel-pulse.jpg", import.meta.url).href, alt: "Steel Pulse performing in 2010", width: 1280, height: 960 },
+    "ub40": { src: new URL("./assets/images/artists/ub40-birmingham-2010.jpg", import.meta.url).href, alt: "UB40 performing in Birmingham, 2010", width: 1280, height: 938 },
+    "duran-duran": { src: new URL("./assets/images/artists/duran-duran-chicago-2008.jpg", import.meta.url).href, alt: "Duran Duran performing in Chicago, 2008", width: 1096, height: 728 },
+    "electric-light-orchestra": { src: new URL("./assets/images/artists/electric-light-orchestra-oslo-1978.jpg", import.meta.url).href, alt: "Electric Light Orchestra performing in Oslo, 1978", width: 800, height: 495 },
+    "birmingham-bhangra": { src: new URL("./assets/images/locations/soho-road-shops.jpg", import.meta.url).href, alt: "Shops on Soho Road, Birmingham, 2011 — a neighbourhood central to UK Bhangra", width: 640, height: 480 },
+    "aston": { src: new URL("./assets/images/history/aston-grazebrook-beam-engine.jpg", import.meta.url).href, alt: "Grazebrook beam engine at Dartmouth Circus, Aston, photographed in 2011", width: 803, height: 600 },
+    "handsworth": { src: new URL("./assets/images/locations/handsworth-park.jpg", import.meta.url).href, alt: "Aerial photograph of Handsworth Park, Birmingham, 2008", width: 1280, height: 850 },
+    "broad-street": { src: new URL("./assets/images/venues/rum-runner-dj-paul-anthony-1977.jpg", import.meta.url).href, alt: "Resident DJ Paul Anthony at the Rum Runner, Birmingham, 1977", width: 1280, height: 1804 },
+    "city-centre": { src: new URL("./assets/images/venues/birmingham-town-hall.jpg", import.meta.url).href, alt: "Birmingham Town Hall from Chamberlain Square, 2009", width: 1280, height: 873 },
+  };
+
+  function renderArchivePhoto(key) {
+    const photo = archivePhotos[key];
+    return `<img class="archive-photo" src="${photo.src}" alt="${photo.alt}" title="${photo.alt}" width="${photo.width}" height="${photo.height}" loading="lazy" decoding="async" />`;
   }
 
   function renderStoryCards(stories) {
@@ -263,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <span class="specimen-tag">${story.year || 'ERA SPEC'}</span>
         </div>
         <div class="story-artwork-box">
-          ${generateArtworkSvg(story.artTheme)}
+          ${renderArchivePhoto(story.id)}
         </div>
         <div class="story-card-body">
           <div>
@@ -400,11 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (dossierCat) dossierCat.textContent = locationData.catalog;
 
     if (dossierArt) {
-      let theme = 'metal';
-      if (locationKey === 'handsworth') theme = 'reggae';
-      else if (locationKey === 'broad-street') theme = 'newwave';
-      else if (locationKey === 'city-centre') theme = 'rockpop';
-      dossierArt.innerHTML = generateArtworkSvg(theme);
+      dossierArt.innerHTML = renderArchivePhoto(locationKey);
     }
   }
 
@@ -452,10 +358,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('modal-catalog').textContent = story.catalogNo;
     document.getElementById('modal-description').textContent = story.copy;
     
-    // Inject custom artwork
+    // Show the same subject photograph as the story card
     const modalArtwork = document.getElementById('modal-artwork');
     if (modalArtwork) {
-      modalArtwork.innerHTML = generateArtworkSvg(story.artTheme);
+      modalArtwork.innerHTML = renderArchivePhoto(story.id);
     }
 
     // Bind modal audio button

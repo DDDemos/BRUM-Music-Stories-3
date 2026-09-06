@@ -597,7 +597,7 @@ img, svg {
   gap: 1.25rem;
 }
 
-/* Custom Visual Artworks (No external photos) */
+/* Exhibition photographs keep the original image container geometry. */
 .exhibition-art-canvas {
   position: absolute;
   inset: 0;
@@ -933,13 +933,15 @@ img, svg {
   z-index: 1;
 }
 
-.story-artwork-box svg {
+.story-artwork-box svg,
+.story-artwork-box .archive-photo {
   width: 100%;
   height: 100%;
   transition: transform 0.5s ease;
 }
 
-.story-card:hover .story-artwork-box svg {
+.story-card:hover .story-artwork-box svg,
+.story-artwork-box .archive-photo {
   transform: scale(1.04);
 }
 
@@ -1779,4 +1781,38 @@ img, svg {
 a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible {
   outline: 2px solid var(--accent-brass);
   outline-offset: 3px;
+}
+
+/* Only photographic content fills existing frames; overlays remain above it. */
+.archive-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Keep the DJ's face in view when the portrait is cropped to a wide frame. */
+.archive-photo[src*="rum-runner-dj-paul-anthony"] {
+  object-position: center 55%;
+}
+
+.image-credits summary {
+  cursor: pointer;
+}
+
+.image-credits p,
+.image-credits ul {
+  margin: 1rem 0;
+}
+
+.image-credits ul {
+  padding-left: 1.25rem;
+}
+
+.image-credits a {
+  text-decoration: underline;
+}
+
+.timeline-card-artwork .archive-photo[src*="black-sabbath"] {
+  object-position: center 20%;
 }
